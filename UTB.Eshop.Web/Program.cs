@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("MySql");
 ServerVersion serverVersion = new MySqlServerVersion("8.0.35");
 
-builder.Services.AddDbContext<EshopDbContext>();
+builder.Services.AddDbContext<EshopDbContext>(optionBuilder => optionBuilder.UseMySql(connectionString, serverVersion));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
