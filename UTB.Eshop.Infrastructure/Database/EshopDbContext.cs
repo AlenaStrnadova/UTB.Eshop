@@ -13,7 +13,6 @@ namespace UTB.Eshop.Infrastructure.Database
         public DbSet<Product> Products { get; set; }
         public EshopDbContext(DbContextOptions options) : base(options) 
         {
-            
         }
     }
 }
