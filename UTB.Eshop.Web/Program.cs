@@ -1,4 +1,8 @@
+using UTB.Eshop.Infrastructure.Database;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<EshopDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
