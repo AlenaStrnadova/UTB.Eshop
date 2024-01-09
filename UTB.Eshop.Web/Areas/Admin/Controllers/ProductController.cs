@@ -23,7 +23,8 @@ namespace UTB.Eshop.Web.Areas.Admin.Controllers
         public IActionResult Create(Product product)
         {
             _productAppService.Create(product);
-            return View();
+           
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
 
     }
